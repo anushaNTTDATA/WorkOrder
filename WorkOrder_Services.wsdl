@@ -22,10 +22,10 @@
 	</types>
 	
 	<message name="WorkOrderRequestMessage">
-		<part name="WorkOrderRequestMsg" element="wo:WorkOrderRequestMsg"/>
+		<part name="WorkOrderRequestMsg" element="wo:WorkOrderRequestMsg" type="wo:WorkOrderRequest"/>
 	</message>
 	<message name="WorkOrderResultMessage">
-		<part name="WorkOrderResultMsg" element="wo:WorkOrderResultMsg"/>
+		<part name="WorkOrderResultMsg" element="wo:WorkOrderResultMsg" type="wo:WorkOrderResult"/>
 	</message>
 	
 	<portType name="WoServices">
