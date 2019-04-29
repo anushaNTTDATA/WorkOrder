@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:bccommon="http://www.huawei.com/bme/cbsinterface/bccommon" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.huawei.com/bme/cbsinterface/bccommon" schemaLocation="CBSInterface_BC_Common.xsd"/>
+	<xs:complexType name="Param">
+		<xs:sequence>
+			<xs:element name="Code" type="xs:string"/>
+			<xs:choice>
+				<xs:element name="Value" type="xs:string"/>
+				<xs:element name="Param" type="Param" maxOccurs="unbounded"/>
+				<xs:element name="ObjParam" type="ComplexParam" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ComplexParam">
+		<xs:choice>
+			<xs:element name="Value" type="xs:string"/>
+			<xs:element name="Param" type="Param" maxOccurs="unbounded"/>
+			<xs:element name="ObjParam" type="ComplexParam" maxOccurs="unbounded"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="WorkOrderRequest">
+		<xs:sequence>
+			<xs:element name="WorkOrderType" type="xs:string"/>
+			<xs:element name="OrderObjType" type="xs:string"/>
+			<xs:element name="OrderObjKey" type="xs:string"/>
+			<xs:element name="OrderObjCode" type="xs:string"/>
+			<xs:element name="SubscriberUUID" type="xs:string"/>
+			<xs:element name="AccountUUID" type="xs:string"/>
+			<xs:element name="CustomerUUID" type="xs:string"/>
+			<xs:element name="MSISDN" type="xs:string" minOccurs="0"/>
+			<xs:element name="IMSI" type="xs:string" minOccurs="0"/>
+			<xs:element name="ContractID" type="xs:string"/>
+			<xs:element name="SubscriberLable" type="xs:string" minOccurs="0"/>
+			<xs:element name="SubscriberProviderID" type="xs:string" minOccurs="0"/>
+			<xs:element name="NotificationDate" type="bccommon:DateTime"/>
+			<xs:element name="BillCycleType" type="xs:string"/>
+			<xs:element name="SubAssociatedID" type="xs:string" minOccurs="0"/>
+			<xs:element name="SubTsmSubType" type="xs:string"/>
+			<xs:element name="OrderParam" type="Param" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
