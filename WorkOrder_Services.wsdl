@@ -25,7 +25,7 @@
 		<part name="WorkOrderRequestMsg" element="wo:WorkOrderRequestMsg" type="wo:WorkOrderRequest"/>
 	</message>
 	<message name="WorkOrderResultMessage">
-		<part name="WorkOrderResultMsg" element="wo:WorkOrderResultMsg" type="wo:WorkOrderResult"/>
+		<part name="WorkOrderResultMsg" element="wo:WorkOrderResultMsg" type="xs:string"/>
 	</message>
 	
 	<portType name="WoServices">
