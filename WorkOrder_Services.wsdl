@@ -3,7 +3,7 @@
 	<types>
 		<xs:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.huawei.com/bme/cbsinterface/woservices">
 			<import namespace="http://www.huawei.com/bme/cbsinterface/cbscommon" schemaLocation="CBSInterface_MessageHeader.xsd"/>
-			<include schemaLocation="WorkOrder.xsd"/>
+			<include schemaLocation="https://github.com/anushaNTTDATA/WorkOrder/blob/master/WorkOrder.xsd"/>
 			<element name="WorkOrderRequestMsg">
 				<xs:complexType>
 					<xs:sequence>
